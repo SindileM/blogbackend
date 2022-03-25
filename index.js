@@ -9,7 +9,7 @@ const categoryRoute = require("./app/routes/categories");
 
 dotenv.config();
 app.use(express.json());
- 
+app.set('port',process.env.PORT || 5000);
 mongoose
 .connect('mongodb+srv://sindile:ukhNTEZenouQ3LZf@blog.e44wg.mongodb.net/Blog?retryWrites=true&w=majority',{
     useNewUrlParser: true,
@@ -27,6 +27,6 @@ app.use("/api/categories", categoryRoute);
 
 
 
-app.listen("5000", () =>{
-    console.log("Backend is running")
-});
+app.listen(app.get("port"), () => {
+    console.log('backend is running')
+})
