@@ -11,13 +11,17 @@ dotenv.config();
 app.use(express.json());
 app.set('port',process.env.PORT || 5000);
 mongoose
-.connect('mongodb+srv://sindile:ukhNTEZenouQ3LZf@blog.e44wg.mongodb.net/Blog?retryWrites=true&w=majority',{
+.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true
 })
 .then(console.log("Connected to MongoDB"))
 .catch((err) => console.log(err));
+
+app.get('/', (req, res) => {
+    res.send('Welcome to S-ARMY-BLOG. Where we love BTS!')
+})
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);

@@ -1,0 +1,106 @@
+GET http://localhost:5000/api/users/623adb5e082c33370f21099e
+
+################################
+POST  http://localhost:5000/api/users/signup/
+Content-Type: application/json
+
+{
+    "username":"sindile",
+    "email":"smakhar@gmail",
+    "password": "2929297"
+}
+
+################################
+PATCH  http://localhost:5000/api/users/signin/
+Content-Type: application/json
+
+{
+    "username":"sindile",
+    "password": "2929297"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

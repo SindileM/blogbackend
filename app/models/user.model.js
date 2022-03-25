@@ -15,10 +15,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    profilePic: {
+    roles: {
         type: String,
-        default: "",
-    },
+        required: true,
+        default:"user"
+      }
   },
   {timestamps: true}
 );
